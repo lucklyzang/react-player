@@ -4,7 +4,6 @@ import Player from './page/player'
 import  MusicList from './page/musiclist'
 import Pubsub from 'pubsub-js'
 import { BrowserRouter as Router,Link,Route,Switch} from 'react-router-dom'
-import 'whatwg-fetch'
 import axios from 'axios';
 
 class Root extends  Component {
@@ -140,10 +139,11 @@ class Root extends  Component {
           );
         return(
             <Router>
-                <section>
+                <section> 
                     <Header/>,
                     <Route exact path="/" component={Home}/>
                     <Route path="/list" component={List}/>
+                    <Route path="/home" component={Home}/>
                 </section>
             </Router>
         )
